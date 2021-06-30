@@ -1,0 +1,14 @@
+<h4>Dynamically updating the toolbar is not possible after Froala version 3.2.0</h4>
+<p>Reproduction:</p>
+<ol>
+  <li>Click the button below the editor. This should add a button to the Froala editors toolbar</li>
+  <li>Open the browsers developer tools (F12).</li>
+  <li>In the console tab you can see that the underline button is added to the the toolbarButtons array.</li>
+  <li>If you downgrade the Froala version to 3.2.0 or lower and test this again, you will see that the button will be added. You can downgrade by executing the following command in a terminal window: 'npm install angular-froala-wysiwyg@3.2.0''</li>
+</ol>
+
+<div [froalaEditor]="firstEditorOptions" (froalaInit)="initialize($event)">
+</div>
+
+<br />
+<button (click)="addToolbarButton()">Add toolbar underline button</button>
