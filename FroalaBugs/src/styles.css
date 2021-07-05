@@ -1,1 +1,28 @@
-/* You can add global styles to this file, and also import other style files */
+/* Add application styles & imports to this file! */
+custom-tag {
+  color: black;
+  font-style: normal
+}
+
+.block-border {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  color: gray;
+  font-style: italic;
+  cursor: pointer;
+}
+
+  .block-border::before, .block-border::after {
+    content: '';
+    flex: 1;
+    border-bottom: 1px solid lightgray;
+  }
+
+  .block-border::before {
+    margin-right: .25em;
+  }
+
+  .block-border::after {
+    margin-left: .25em;
+  }

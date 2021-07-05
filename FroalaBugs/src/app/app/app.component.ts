@@ -21,6 +21,14 @@ export class AppComponent {
     this._router.navigate(['/dynamic-toolbar-update']);
   }
 
+  navigateAddTextCustomBlock(): void {
+    this._router.navigate(['/add-text-custom-block'])
+  }
+
+  navigateDragBlock(): void {
+    this._router.navigate(['/drag-block'])
+  }
+
   closeBugs(): void {
     this._router.navigate(['/']);
   }
