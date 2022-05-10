@@ -50,3 +50,6 @@ Thumbs.db
 
 # package files
 package-lock.json
+
+# angular cache files
+.angular/cache/*

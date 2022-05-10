@@ -12,11 +12,6 @@ export class AppComponent {
     private _router: Router
   ) { }
 
-
-  navigateConsoleError(): void {
-    this._router.navigate(['/console-error']);
-  }
-
   navigateDynamicToolbarUpdate(): void {
     this._router.navigate(['/dynamic-toolbar-update']);
   }
@@ -28,11 +23,6 @@ export class AppComponent {
   navigateDragBlock(): void {
     this._router.navigate(['/drag-block'])
   }
-
-  navigateBoldTest(): void {
-    this._router.navigate(['/bold-test'])
-  }
-
 
   closeBugs(): void {
     this._router.navigate(['/']);
