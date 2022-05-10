@@ -5,12 +5,14 @@ import { DynamicToolbarUpdateComponent } from './dynamic-toolbar-update/dynamic-
 import { ConsoleErrorComponent } from './console-error/console-error.component';
 import { AddTextBeforeAfterInsertedCustomBlockComponent } from './add-text-before-inserted-custom-block/add-text-before-inserted-custom-block.component';
 import { DragBlockComponent } from './drag-block/drag-block.component';
+import { BoldTestComponent } from './bold-test/bold-test.component';
 
 const routes: Routes = [
   { path: 'dynamic-toolbar-update', component: DynamicToolbarUpdateComponent },
   { path: 'console-error', component: ConsoleErrorComponent },
   { path: 'add-text-custom-block', component: AddTextBeforeAfterInsertedCustomBlockComponent },
-  { path: 'drag-block', component: DragBlockComponent }
+  { path: 'drag-block', component: DragBlockComponent },
+  { path: 'bold-test', component: BoldTestComponent }
 ];
 
 @NgModule({

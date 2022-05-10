@@ -1,0 +1,7 @@
+<form [formGroup]="form">
+  <div [froalaEditor]="firstEditorOptions" (froalaInit)="initialize($event)" formControlName="editor">
+  </div>
+</form>
+<br />
+<button (click)="insertHtml()" style="margin-right:8px;">Insert html</button>
+<button (click)="logHtml()">Log html</button>

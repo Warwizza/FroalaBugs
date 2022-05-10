@@ -29,6 +29,11 @@ export class AppComponent {
     this._router.navigate(['/drag-block'])
   }
 
+  navigateBoldTest(): void {
+    this._router.navigate(['/bold-test'])
+  }
+
+
   closeBugs(): void {
     this._router.navigate(['/']);
   }
