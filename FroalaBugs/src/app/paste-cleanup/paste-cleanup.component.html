@@ -1,0 +1,36 @@
+<h4>Returning altered results in the paste.beforeCleanup event does not work</h4>
+<p>
+  Clarification:<br />
+  The first Froala editor fires the paste.beforeCleanup event. It calls a fuction which removes all images from the pasted html (see TypeScript code).<br />
+  The second Froala editor fires the paste.afterCleanup event. It calls the same function as the first editor (see TypeScript code).<br />
+  The result of the first editor still includes the image even though it's not present in the returned result (see console.log).<br />
+  The result of the second editor has removed the image from the pasted result.<br />
+  <br />
+  According to the docs (<a href="https://froala.com/wysiwyg-editor/docs/events/#paste.beforeCleanup">here</a> and <a href="https://froala.com/wysiwyg-editor/docs/events/#paste.afterCleanup">here</a>) both events should pasted the 'new' returned string (From the docs: "<i>If a string is returned, the new string will be used as the pasted content.</i>")
+</p>
+<p>Reproduction:</p>
+<ol>
+  <li>Copy the text below the editors (including the image).</li>
+  <li>Paste it into the first editor.</li>
+  <li>The image is present in the paste result.</li>
+  <li>Open the developer tools (F12).</li>
+  <li>The returned result does not include the image tag. Why does the editor still show the image?</li>
+</ol>
+<ol>
+  <li>Copy the text below the editors (including the image).</li>
+  <li>Paste it into the first editor.</li>
+  <li>The image is <strong>not</strong> present in the paste result.</li>
+  <li>Open the developer tools (F12).</li>
+  <li>The returned result does not include the image tag. Works as expected.</li>
+</ol>
+
+<div [froalaEditor]="pasteBeforeEditorOptions" (froalaInit)="initialize1($event)"></div>
+<br />
+<div [froalaEditor]="pasteAfterEditorOptions" (froalaInit)="initialize2($event)"></div>
+
+<p>
+  Text before the image<br />
+  <img src="https://via.placeholder.com/150" /><br />
+  Text after the image
+</p>
+<br />

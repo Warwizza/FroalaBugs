@@ -17,11 +17,15 @@ export class AppComponent {
   }
 
   navigateAddTextCustomBlock(): void {
-    this._router.navigate(['/add-text-custom-block'])
+    this._router.navigate(['/add-text-custom-block']);
   }
 
   navigateDragBlock(): void {
-    this._router.navigate(['/drag-block'])
+    this._router.navigate(['/drag-block']);
+  }
+
+  navigatePasteCleanUp(): void {
+    this._router.navigate(['/paste-cleanup']);
   }
 
   closeBugs(): void {
