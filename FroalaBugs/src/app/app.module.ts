@@ -10,6 +10,7 @@ import { DynamicToolbarUpdateComponent } from './dynamic-toolbar-update/dynamic-
 import { AddTextBeforeAfterInsertedCustomBlockComponent } from './add-text-before-inserted-custom-block/add-text-before-inserted-custom-block.component';
 import { DragBlockComponent } from './drag-block/drag-block.component';
 import { PasteCleanupComponent } from './paste-cleanup/paste-cleanup.component';
+import { NoopAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { PasteCleanupComponent } from './paste-cleanup/paste-cleanup.component';
     AppRoutingModule,
     FroalaEditorModule.forRoot(),
     FroalaViewModule.forRoot(),
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    NoopAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
