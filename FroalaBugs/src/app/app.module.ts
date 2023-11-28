@@ -11,6 +11,7 @@ import { AddTextBeforeAfterInsertedCustomBlockComponent } from './add-text-befor
 import { DragBlockComponent } from './drag-block/drag-block.component';
 import { PasteCleanupComponent } from './paste-cleanup/paste-cleanup.component';
 import { NoopAnimationsModule } from '@angular/platform-browser/animations';
+import { EditorAddsNbspComponent } from './editor-adds-nbsp/editor-adds-nbsp.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { NoopAnimationsModule } from '@angular/platform-browser/animations';
     DynamicToolbarUpdateComponent,
     AddTextBeforeAfterInsertedCustomBlockComponent,
     DragBlockComponent,
-    PasteCleanupComponent
+    PasteCleanupComponent,
+    EditorAddsNbspComponent
   ],
   imports: [
     BrowserModule,

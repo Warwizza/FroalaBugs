@@ -28,6 +28,10 @@ export class AppComponent {
     this._router.navigate(['/paste-cleanup']);
   }
 
+  navigateEditorAddsNbsp() {
+    this._router.navigate(['/add-nbsp']);
+  }
+
   closeBugs(): void {
     this._router.navigate(['/']);
   }

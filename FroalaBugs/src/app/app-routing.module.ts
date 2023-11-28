@@ -5,12 +5,14 @@ import { DynamicToolbarUpdateComponent } from './dynamic-toolbar-update/dynamic-
 import { AddTextBeforeAfterInsertedCustomBlockComponent } from './add-text-before-inserted-custom-block/add-text-before-inserted-custom-block.component';
 import { DragBlockComponent } from './drag-block/drag-block.component';
 import { PasteCleanupComponent } from './paste-cleanup/paste-cleanup.component';
+import { EditorAddsNbspComponent } from './editor-adds-nbsp/editor-adds-nbsp.component';
 
 const routes: Routes = [
   { path: 'dynamic-toolbar-update', component: DynamicToolbarUpdateComponent },
   { path: 'add-text-custom-block', component: AddTextBeforeAfterInsertedCustomBlockComponent },
   { path: 'drag-block', component: DragBlockComponent },
-  { path: 'paste-cleanup', component: PasteCleanupComponent }
+  { path: 'paste-cleanup', component: PasteCleanupComponent },
+  { path: 'add-nbsp', component: EditorAddsNbspComponent }
 ];
 
 @NgModule({

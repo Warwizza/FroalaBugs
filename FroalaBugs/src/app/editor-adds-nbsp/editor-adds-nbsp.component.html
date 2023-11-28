@@ -1,0 +1,12 @@
+<h4>Nested blocks add a &amp;nbsp; in the editor.</h4>
+
+<p>A little introduction. We have an application in which users can customize the base mail templates we provide. These mail templates can contain certain blocks which are dependant on certain parameters. For example if the user who is receiving the mail already has an password or not. If not we can include a little block in the mail which conatis a link to the set password page (this is not usefull for users who already have a password, so it will be omitted for them). This requires us to make it visible to our users where the blocks start and end. We run the template (we get from the server) through some client side code (see .ts file for a simplified example) to add the start and end block limiters before displaying it in the editor. Blocks can be nested in one an another.</p>
+<p><strong>Bug description:</strong> When we load the mail template from the server and it contains nested blocks a &amp;nbsp; gets added between both opening limiters. This breaks the mark up of the e-mail we send.</p>
+<p>Reproduction</p>
+<ol>
+  <li>Click the question mark button in the toolbar to add the test markup into the editor.</li>
+  <li>The editor has put '&amp;nbsp;' between the opening tag of the first block and the opening of the second block.</li>
+</ol>
+
+<div (froalaInit)="initialize($event)" [froalaEditor]="froalaOptions">
+</div>
