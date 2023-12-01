@@ -28,7 +28,10 @@
               "./node_modules/froala-editor/css/froala_style.min.css",
               "./node_modules/froala-editor/css/themes/gray.min.css"
             ],
-            "scripts": [
+            "scripts": [],
+            "allowedCommonJsDependencies": [
+              "froala-editor/js/plugins/lists.min.js",
+              "froala-editor"
             ],
             "vendorChunk": true,
             "extractLicenses": false,
@@ -99,7 +102,8 @@
             "styles": [
               "src/styles.css"
             ],
-            "scripts": []
+            "scripts": [
+            ]
           }
         },
         "lint": {

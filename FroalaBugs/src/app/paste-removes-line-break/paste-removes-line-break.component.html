@@ -1,0 +1,18 @@
+<h4>Pasting removes line break between lists when the ENTER_BR option is set</h4>
+
+<p>Reproduction</p>
+<ol>
+  <li>Click the ordered list button in the toolbar.</li>
+  <li>Create a list of two items.</li>
+  <li>Hit the enter key twice to stop adding items to the list.</li>
+  <li>Hit the enter key again to create an extra line break.</li>
+  <li>Click the unordered list button.</li>
+  <li>Create a list of two items.</li>
+  <li>Select and cut all the contents of the editor.</li>
+  <li>Now paste it back in the editor.</li>
+  <li>The extra line break has been removed.</li>
+</ol>
+<p>The type of lists doesn't matter. It will remove the line break when you use two ordered lists, two unordered lists or when you mix them.</p>
+
+<div (froalaInit)="initialize($event)" [froalaEditor]="froalaOptions">
+</div>

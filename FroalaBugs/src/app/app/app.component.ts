@@ -24,12 +24,12 @@ export class AppComponent {
     this._router.navigate(['/drag-block']);
   }
 
-  navigatePasteCleanUp(): void {
-    this._router.navigate(['/paste-cleanup']);
-  }
-
   navigateEditorAddsNbsp() {
     this._router.navigate(['/add-nbsp']);
+  }
+
+  navigatePasteRemovesLineBreaks() {
+    this._router.navigate(['/paste-removes-line-break']);
   }
 
   closeBugs(): void {
