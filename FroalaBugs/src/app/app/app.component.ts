@@ -32,6 +32,10 @@ export class AppComponent {
     this._router.navigate(['/paste-removes-line-break']);
   }
 
+  navigateListInCustomTag() {
+    this._router.navigate(['/list-custom-tag']);
+  }
+
   closeBugs(): void {
     this._router.navigate(['/']);
   }

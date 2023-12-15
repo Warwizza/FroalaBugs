@@ -11,6 +11,7 @@ import { DragBlockComponent } from './drag-block/drag-block.component';
 import { NoopAnimationsModule } from '@angular/platform-browser/animations';
 import { EditorAddsNbspComponent } from './editor-adds-nbsp/editor-adds-nbsp.component';
 import { PasteRemovesLineBreakComponent } from './paste-removes-line-break/paste-removes-line-break.component';
+import { ListInCustomTagNotWorkingComponent } from './list-in-custom-tag-not-working/list-in-custom-tag-not-working.component';
 
 //Froala imports
 import { FroalaEditorModule, FroalaViewModule } from 'angular-froala-wysiwyg';
@@ -23,7 +24,8 @@ import 'froala-editor/js/plugins/lists.min.js';
     AddTextBeforeAfterInsertedCustomBlockComponent,
     DragBlockComponent,
     EditorAddsNbspComponent,
-    PasteRemovesLineBreakComponent
+    PasteRemovesLineBreakComponent,
+    ListInCustomTagNotWorkingComponent
   ],
   imports: [
     BrowserModule,

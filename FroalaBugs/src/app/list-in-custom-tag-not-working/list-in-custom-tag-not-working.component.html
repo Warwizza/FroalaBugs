@@ -1,0 +1,20 @@
+<h4>Creating a list (ordered or unordered) inside a custom tag leads to some strange behaviour.</h4>
+
+<p>Reproduction 1</p>
+<ol>
+  <li>Click the question mark button in the toolbar to add the test markup into the editor.</li>
+  <li>Click on the text between the block delimiters.</li>
+  <li>Click the ordered or unordered list button.</li>
+  <li>The bullet point (or number) will appear before the block delimter.</li>
+</ol>
+<p>Reproduction 2</p>
+<ol>
+  <li>Click the star button in the toolbar to add the test markup into the editor.</li>
+  <li>Click on the text between the block delimiters.</li>
+  <li>Click the ordered or unordered list button.</li>
+  <li>The bullet point (or number) will appear before the text above the block delimiters.</li>
+</ol>
+<div (froalaInit)="initialize($event)" [froalaEditor]="froalaOptions">
+</div>
+<br />
+<button (click)="resetEditor()">Reset editor content</button>
