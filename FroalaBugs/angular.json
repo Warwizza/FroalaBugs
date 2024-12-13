@@ -74,18 +74,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "FroalaBugs:build"
+            "buildTarget": "FroalaBugs:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "FroalaBugs:build:production"
+              "buildTarget": "FroalaBugs:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "FroalaBugs:build"
+            "buildTarget": "FroalaBugs:build"
           }
         },
         "test": {
@@ -133,5 +133,8 @@
         }
       }
     }
+  },
+  "cli": {
+    "analytics": false
   }
 }

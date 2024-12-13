@@ -1,0 +1,15 @@
+<h4>The button toolbar has no highlighting of active buttons.</h4>
+
+<p>Reproduction</p>
+<ol>
+  <li>Type some text in the editor.</li>
+  <li>Select all or part of the text.</li>
+  <li>Click the bold button (or press Ctrl + B / Cmd + B).</li>
+  <li>The bold button is not highlighted. The fr-active class gets applied to the button, but this does not do anything.</li>
+  <li>Go back to the code and comment or remove the "this.setMaterialSymbolsIcons()" line in the ngOnInit() function (line 25).</li>
+  <li>Repeat the steps above and now the button is highlighted.</li>
+</ol>
+<p>The type of lists doesn't matter. It will remove the line break when you use two ordered lists, two unordered lists or when you mix them.</p>
+
+<div (froalaInit)="initialize($event)" [froalaEditor]="froalaOptions">
+</div>

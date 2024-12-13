@@ -1,38 +1,46 @@
 import { Component, OnInit } from '@angular/core';
+
 import FroalaEditor from 'froala-editor';
+import { FroalaOptions } from 'froala-editor';
+import { FroalaEditorModule } from 'angular-froala-wysiwyg';
 
 @Component({
-  selector: 'app-add-text-before-inserted-custom-block',
-  templateUrl: './add-text-before-inserted-custom-block.component.html',
-  styleUrls: ['./add-text-before-inserted-custom-block.component.css']
+    selector: 'app-add-text-before-inserted-custom-block',
+    templateUrl: './add-text-before-inserted-custom-block.component.html',
+    styleUrls: ['./add-text-before-inserted-custom-block.component.css'],
+    standalone: true,
+    imports: [FroalaEditorModule]
 })
 export class AddTextBeforeAfterInsertedCustomBlockComponent implements OnInit {
 
-  froalaOptions: Object = {
-    toolbarButtons: ['insertContent'],
+  froalaOptions: Partial<FroalaOptions> = {
+    immediateAngularModelUpdate: true,
     codeMirror: false,
-    enter: FroalaEditor.ENTER_DIV,
+    enter: FroalaEditor.ENTER_BR,
     quickInsertEnabled: false,
     attribution: false,
-    pastePlain: true,
     htmlExecuteScripts: false,
+    theme: 'gray',
     wordPasteModal: false,
-    placeholderText: 'Edit here.',
+    placeholderText: 'Type here',
     charCounterCount: false,
-    imageEditButtons: ['imageRemove', 'imageDisplay', 'imageAlign', 'imageSize'],
-    imageDefaultAlign: 'left',
-    imageDefaultDisplay: 'inline',
+    toolbarButtons: ['insertContent'],
+    key: 'demo-key',
     fontFamilyDefaultSelection: 'Roboto',
     fontSizeDefaultSelection: '14',
     wordPasteKeepFormatting: false,
+    htmlAllowedTags: ['br', 'header', 'footer'],
+    imagePaste: false,
+    useClasses: false,
+    linkAlwaysBlank: true,
+    listAdvancedTypes: false,
     videoEditButtons: [],
-    paragraphFormat: {
-      N: 'normal',
-      H1: 'heading 1',
-      H2: 'heading 2'
-    },
-    htmlAllowedTags: ['h1', 'h2', 'strong', 'em', 'u', 'div', 'ul', 'ol', 'li', 'img', 'br', 'a', 'p', 'span', 'custom-tag'],
-    htmlDoNotWrapTags: ['custom-tag']
+    htmlAllowedAttrs: ['href', 'src', 'data', 'data-.*', 'contenteditable', 'style', 'height', 'width', 'draggable', 'class', 'frameborder', 'allowfullscreen', 'target', 'id', 'name'],
+    htmlAllowedStyleProps: ['height', 'width', 'display', 'margin', 'text-align', 'vertical-align', 'float'],
+    pasteAllowedStyleProps: ['height', 'width', 'display', 'text-align'],
+    wordAllowedStyleProps: ['height', 'width', 'display', 'text-align'],
+    zIndex: 1000,
+    toolbarSticky: false
   };
 
   editor = null;
@@ -42,6 +50,7 @@ export class AddTextBeforeAfterInsertedCustomBlockComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
+    FroalaEditor.ICON_DEFAULT_TEMPLATE = 'svg';
     // Custom button
     FroalaEditor.DefineIcon('insertContent', { NAME: 'insertContent', SVG_KEY: 'help' });
     var self = this;
@@ -58,17 +67,14 @@ export class AddTextBeforeAfterInsertedCustomBlockComponent implements OnInit {
 
   private insertContent() {
     this.editor.html.insert(`
-      <span id=span-id1 class=block-border contenteditable="false">
+      <header class=block-border contenteditable="false">
         Block for users with an account
-      </span>
-      
-      <custom-tag id=block-id1 name=block>
-        <div></div>
-      </custom-tag>
-      
-      <span id=span-id2 class=block-border contenteditable="false">
+      </header>
+      <br />
+      <footer class=block-border contenteditable="false">
         Block for users with an account
-      </span>`);
+      </footer>
+    `);
   }
 
   public initialize(initControls) {
